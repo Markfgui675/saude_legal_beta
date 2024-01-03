@@ -1,2 +1,3 @@
-# saude_legal_beta
- Teste do front-end do site do saúde legal.
+# Saúde Legal - Beta
+
+Repositório paralelo para verificação e teste do layout do novo Saúde Legal.
