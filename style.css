@@ -13,7 +13,7 @@
   --fonte-wix:'Wix Madefor Display';
   --verde:#3C775A; 
   --vermelho:#AB0716;
-  --preto:#000000;
+  --preto:rgba(0,0,0,0.80);
   --cinza1:#393939;
   --cinza2:#999999;
   --cinza3:#D9D9D9;
@@ -176,7 +176,6 @@ a{
 .sesso .text-wrapper-3{
   position: relative;
   width: 70%;
-  height: 61px;
   font-family: var(--fonte-wix), Helvetica;
   font-weight: 400;
   color: var(--preto);
@@ -249,93 +248,148 @@ a{
 
 /*MAIS ACESSADOS*/
 
-.sess02{
-  width: 100%; height: 72vh; background: var(--cinza3); flex-direction: column; justify-content: center; align-items: center; gap: 15px; display: inline-flex;
-}
-
-.Frame705{
-  justify-content: flex-start; align-items: flex-end; gap: 884px; display: inline-flex
-}
-
-.MaisAcessado{
-  color: black; font-size: 16px; font-family: var(--fonte-wix), Helvetica; font-weight: 600; line-height: 17.12px; word-wrap: break-word
-}
-
-.Frame752{
-  flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex
-}
-
-.Frame751{
-  justify-content: flex-start; align-items: flex-start; gap: 3px; display: inline-flex
-}
-
-.Frame750{
-  width: 30px; height: 29px; padding: 10px; background: var(--verde); border-radius: 90px; justify-content: center; align-items: center; gap: 10px; display: flex
-}
-.Vector11{
+.mais-acessados{
   width: 100%;
-  height: 100%;
-  background: url("icons/vector_arrow_left.png") no-repeat;
+  height: 72vh;
+  background: var(--cinza3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-.Frame749{
-  width: 53px; height: 29px; padding: 10px; background: var(--branco); border-radius: 90px; justify-content: center; align-items: center; gap: 10px; display: flex
-}
-.Vector10{
+.mais-acessados .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  background: url("icons/vector_arrow_right.png") no-repeat;
+  max-width: 1500px;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
-.Frame716{
-  justify-content: flex-start; align-items: flex-start; gap: 15px; display: inline-flex
+.mais-acessados .info .text{
+  display: flex;
+  justify-content: start;
+  align-items: end;
 }
+.mais-acessados .info .text h3{
+  font-size: 16px;
+  font-family: var(--fonte-wix);
+  color: var(--preto);
+  font-weight: 600;
+}
+
+.mais-acessados .info .box-arrows{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 8px;
+}
+.mais-acessados .info .box-arrows i{
+  height: 32px;
+  width: 32px;
+  background: var(--verde);
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--branco);
+  cursor: pointer;
+}
+.mais-acessados .info .box-arrows i:active{
+  transform: translateY(-10%) scale(0.95);
+}
+
+.mais-acessados .wrapper{
+  width: 100%;
+  max-width: 1500px;
+  padding-left: 8%;
+  padding-right: 8%;
+  position: relative;
+}
+
+.mais-acessados .wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.mais-acessados .wrapper .carousel::-webkit-scrollbar{
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
 
 .Frame738{
-  width: 353px; height: 289px; position: relative
+  width: 353px; height: 289px; position: relative;
+  list-style: none;
+  cursor: pointer;
+  scroll-snap-align: start;
 }
-
 .Frame713{
   left: 0px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex
 }
-
 .Rectangle2{
   width: 353px; height: 289px; background: var(--branco); border-radius: 16px
 }
-
 .Frame710-1{
   left: 38px; top: 136px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex
 }
-
 .Frame709{
   width: 163px; padding: 8px; border-radius: 60px; border: 1px var(--preto) solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex
 }
-
 .JornadaDentroDaSecretaria{
   color: var(--preto); font-size: 16px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 14px; word-wrap: break-word
 }
-
 .Frame12{
   flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: flex
 }
-
 .Carreiras{
   color: var(--preto); font-size: 32px; font-family: var(--fonte-wix), Helvetica; font-weight: 500; line-height: 32.10px; word-wrap: break-word
 }
-
 .SedAmetDolorSitAmet{
   color: var(--preto); font-size: 16px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 19.60px; word-wrap: break-word
 }
-
 .vector-box{
   width: 64px; height: 64px; left: 276.50px; top: 17.50px; position: absolute
 }
-
 .Vector9{
   width: 100%;
   height: 100%;
   background: url("icons/vector_arrow_white.png") no-repeat;
 }
+
+.mais-acessados .wrapper .carousel :where(.card, .img){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*HUMANS IMAGE*/
 .big-image{
@@ -344,6 +398,10 @@ a{
   background: url("images/humans.png") no-repeat;
   background-size: cover;
 }
+
+
+
+
 
 /*PLATAFORMA HUMANIZADA - --*/
 
@@ -385,35 +443,76 @@ a{
 /*NOVO NA SES*/
 
 .Sess05{
-  width: 100%; height: 56vh; background: var(--verde); flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: flex;
+  width: 100%; 
+  height: 56vh; 
+  background: var(--verde); 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: flex;
 }
 
 .Frame718{
-  height: 170px; justify-content: center; align-items: center; gap: 82px; display: inline-flex
+  height: 170px; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 82px; 
+  display: inline-flex;
 }
 
 .Frame6{
-  width: 494px; height: 192px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex
+  width: 494px; 
+  height: 192px; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 8px; 
+  display: inline-flex;
 }
 
 .Roteiro{
-  width: 266px; color: var(--branco); font-size: 14px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 19.60px; word-wrap: break-word
+  width: 266px; 
+  color: var(--branco); 
+  font-size: 14px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 400; 
+  line-height: 19.60px; 
+  word-wrap: break-word;
 }
 
 .Frame17{
-  flex-direction: column; justify-content: flex-start; align-items: flex-end; gap: 3px; display: flex
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-end; 
+  gap: 3px; 
+  display: flex;
 }
 
 .Frame8{
-  width: 494px; justify-content: flex-start; align-items: flex-end; gap: 10px; display: inline-flex
+  width: 494px; 
+  justify-content: flex-start; 
+  align-items: flex-end; 
+  gap: 10px; 
+  display: inline-flex;
 }
 
 .Novo{
-  width: 237px; height: 62px; color: var(--branco); font-size: 96px; font-family: var(--fonte-wix), Helvetica; font-weight: 800; word-wrap: break-word
+  width: 237px; 
+  height: 62px; 
+  color: var(--branco); 
+  font-size: 96px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 800; 
+  word-wrap: break-word;
 }
 
 .Frame7{
-  width: 474px; justify-content: flex-end; align-items: flex-end; gap: 16px; display: inline-flex
+  width: 474px; 
+  justify-content: flex-end; 
+  align-items: flex-end; 
+  gap: 16px; 
+  display: inline-flex;
 }
 
 .f-v{
@@ -427,19 +526,41 @@ a{
 }
 
 .NaSes{
-  width: 388px; height: 82px; color: var(--branco); font-size: 96px; font-family: var(--fonte-wix), Helvetica; font-weight: 800; word-wrap: break-word
+  width: 388px; 
+  height: 82px; 
+  color: var(--branco); 
+  font-size: 96px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 800; 
+  word-wrap: break-word;
 }
 
 .Frame719{
-  flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: inline-flex;
 }
 
 .MainTitle{
-  width: 266px; color: var(--branco); font-size: 14px; font-family: var(--fonte-wix), Helvetica; font-weight: 900; line-height: 19.60px; word-wrap: break-word
+  width: 266px; 
+  color: var(--branco); 
+  font-size: 14px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 900; 
+  line-height: 19.60px; 
+  word-wrap: break-word;
 }
 
 .Texto{
-  width: 266px; color: var(--branco); font-size: 14px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 19.60px; word-wrap: break-word
+  width: 266px; 
+  color: var(--branco); 
+  font-size: 14px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 400; 
+  line-height: 19.60px; 
+  word-wrap: break-word;
 }
 
 
@@ -455,32 +576,61 @@ a{
 }
 
 .Frame741{
-  width: 132px; height: 172px; position: relative
+  width: 132px; 
+  height: 172px; 
+  position: relative;
 }
 
 .ClipPathGroup{
   display: block;
-  width: 98.53px; height: 155.01px; left: 0px; top: 16.99px; position: absolute
+  width: 98.53px; 
+  height: 155.01px; 
+  left: 0px; 
+  top: 16.99px; 
+  position: absolute;
 }
 
 .Frame724{
-  flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 27px; display: inline-flex
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 27px; 
+  display: inline-flex;
 }
 
 .Frame69{
-  flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: flex;
 }
 
 .Frame56{
-  align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex
+  align-self: stretch; 
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 8px; 
+  display: inline-flex;
 }
 
 .EntrandoNaSes{
-  flex: 1 1 0; color: var(--preto); font-size: 36px; font-family: var(--fonte-wix), Helvetica; font-weight: 500; word-wrap: break-word
+  flex: 1 1 0; 
+  color: var(--preto); 
+  font-size: 36px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 500; 
+  word-wrap: break-word;
 }
 
 .Info{
-  width: 416px; color: var(--preto); font-size: 16px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 24px; word-wrap: break-word
+  width: 416px; 
+  color: var(--preto); 
+  font-size: 16px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 400; 
+  line-height: 24px; 
+  word-wrap: break-word;
 }
 
 .Frame709-1{
@@ -520,35 +670,74 @@ a{
 
 
 .Frame728{
-  width: 100%; height: 432px; padding: 10px; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex
+  width: 100%; 
+  height: 432px; 
+  padding: 10px; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  display: inline-flex;
 }
 
 .Frame726{
-  width: 100%; height: 408px; background: black; border-radius: 24px; justify-content: center; align-items: center; gap: 83px; display: inline-flex
+  width: 100%; 
+  height: 408px; 
+  background: black; 
+  border-radius: 24px; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 83px; 
+  display: inline-flex;
 }
 
 .Frame724-1{
-  flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 27px; display: inline-flex
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 27px; 
+  display: inline-flex;
 }
 
 .Frame69-1{
-  flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: flex;
 }
 
 .Frame56-1{
-  align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex
+  align-self: stretch; 
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 8px; 
+  display: inline-flex;
 }
 
 .JornadaNaSes{
-  flex: 1 1 0; color: var(--branco); font-size: 36px; font-family: var(--fonte-wix), Helvetica; font-weight: 500; word-wrap: break-word
+  flex: 1 1 0; 
+  color: var(--branco); 
+  font-size: 36px; 
+  font-family: var(--fonte-wix),Helvetica; 
+  font-weight: 500; 
+  word-wrap: break-word;
 }
 
 .Frame727{
-  width: 177px; height: 176px; position: relative
+  width: 177px; 
+  height: 176px; 
+  position: relative;
 }
 
 .Frame69-1 .Info{
-  width: 416px; color: var(--cinza2); font-size: 16px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 24px; word-wrap: break-word
+  width: 416px; 
+  color: var(--cinza2); 
+  font-size: 16px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 400; 
+  line-height: 24px; 
+  word-wrap: break-word;
 }
 
 .Frame709-2{
@@ -773,7 +962,10 @@ footer .Frame731{
 }
 
 footer .Frame747{
-  justify-content: flex-start; align-items: flex-start; gap: 2px; display: flex
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 2px; 
+  display: flex;
 }
 
 footer .Frame747 .img{
@@ -784,15 +976,30 @@ footer .Frame747 .img{
 }
 
 footer .Frame747 .saudelegal{
-  width: 84px; color: var(--preto); font-size: 20px; font-family: var(--fonte-wix), Helvetica; font-weight: bold; word-wrap: break-word
+  width: 84px; 
+  color: var(--preto); 
+  font-size: 20px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: bold; 
+  word-wrap: break-word;
 }
 
 footer .Frame70{
-  width: 345px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex
+  width: 345px; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 10px; 
+  display: inline-flex;
 }
 
 footer .Frame70 p{
-  width: 100%; color: var(--preto); font-size: 16px; font-family: var(--fonte-wix), Helvetica; font-weight: 400; line-height: 24px; word-wrap: break-word;
+  color: var(--preto); 
+  font-size: 16px; 
+  font-family: var(--fonte-wix), Helvetica; 
+  font-weight: 400; 
+  line-height: 24px; 
+  word-wrap: break-word;
 }
 
 
@@ -949,7 +1156,7 @@ footer .Frame70 p{
 
   .sesso{
     padding: 0px 16px;
-    height: 88vh;
+    height: 100vh;
   }
 
   .sesso h1{
@@ -960,6 +1167,7 @@ footer .Frame70 p{
 
   .sesso .texto{
     justify-content: start;
+    gap: 16px;
     width: 100%;
   }
 
@@ -995,6 +1203,8 @@ footer .Frame70 p{
 
   .plataforma-info{
     flex-direction: column;
+    height: 56vh;
+    gap: 40px;
   }
   .plataforma-info .box{
     width: 90%;
@@ -1015,8 +1225,19 @@ footer .Frame70 p{
     height: 408px; 
     justify-content: center; 
     align-items: center; 
-    gap: 0px; 
     display: flex;
+  }
+  .Frame724{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    padding: 16px;
+  }
+  .Frame724 .Frame69, .Frame724 .Frame69 .Info{
+    width: 100%;
   }
   .Frame741, .ClipPathGroup{
     display: none;
@@ -1063,7 +1284,7 @@ footer .Frame70 p{
 
 
   footer{
-    height: 24vh;
+    height: 48vh;
     padding-left: 32px; 
     padding-right: 32px; 
     padding-top: 32px; 
@@ -1075,6 +1296,75 @@ footer .Frame70 p{
     justify-content: center;
     align-items: center;
   }
+  footer .Frame70{
+    width: 100%;
+    font-size: 12px;
+  }
 
 
 }
+
+
+@media (max-width: 500px){
+
+  .sesso h1{
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .sesso .text-wrapper-3{
+    margin-bottom: 48px;
+  }
+
+  .Sess05{
+    height: 80vh; 
+  }
+  .Frame718{
+    height: 100%;
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media (max-width: 330px){
+  .sesso .text-wrapper-3{
+    margin-bottom: 72px;
+  }
+}
+
+/*MEDIA QUERIES DO CAROUSEL*/
+
+@media screen and (max-width: 1340px){
+  .mais-acessados .wrapper .carousel{
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 910px){
+  .mais-acessados .wrapper .carousel{
+    grid-auto-columns: calc((100%/ 2) - -45px);
+  }
+}
+@media screen and (max-width: 765px){
+  .mais-acessados .wrapper .carousel{
+    grid-auto-columns: calc((100%/ 2) - -90px);
+  }
+}
+@media screen and (max-width: 665px){
+  .mais-acessados .wrapper .carousel{
+    grid-auto-columns: calc((100%/ 2) - -135px);
+  }
+}
+@media screen and (max-width: 565px){
+  .mais-acessados .wrapper .carousel{
+    grid-auto-columns: calc((100%/ 2) - -180px);
+  }
+}
+@media screen and (max-width: 465px){
+  .mais-acessados .wrapper .carousel{
+    gap: 16px;
+    grid-auto-columns: 100%;
+  }
+}
+
